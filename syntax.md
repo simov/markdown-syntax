@@ -310,8 +310,8 @@ var code = 'block'
 
 ## Frontmatter
 
-- [yaml](yaml.md)
-- [toml](toml.md)
+- [yaml](frontmatter/yaml.md)
+- [toml](frontmatter/toml.md)
 
 
 ## Character Encoding
