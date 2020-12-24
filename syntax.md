@@ -160,6 +160,47 @@ _**`something`**_
 https://github.com/simov/markdown-viewer
 
 
+## Combinations
+
+- italic
+  - [*named link*][some-url]
+  - *[named link][some-url]*
+  - [_named link_][some-url]
+  - _[named link][some-url]_
+- bold
+  - [**named link**][some-url]
+  - **[named link][some-url]**
+  - [__named link__][some-url]
+  - __[named link][some-url]__
+- bold italic
+  - [***named link***][some-url]
+  - ***[named link][some-url]***
+  - [___named link___][some-url]
+  - ___[named link][some-url]___
+  - [*__named link__*][some-url]
+  - [__*named link*__][some-url]
+  - __*[named link][some-url]*__
+- code
+  - [`named link`][some-url]
+- code italic
+  - *[`named link`][some-url]*
+  - [*`named link`*][some-url]
+  - _[`named link`][some-url]_
+  - [_`named link`_][some-url]
+- code bold
+  - **[`named link`][some-url]**
+  - [**`named link`**][some-url]
+  - __[`named link`][some-url]__
+  - [__`named link`__][some-url]
+- code bold italic
+  - [***`named link`***][some-url]
+  - ***[`named link`][some-url]***
+  - [___`named link`___][some-url]
+  - ___[`named link`][some-url]___
+  - [*__`named link`__*][some-url]
+  - [__*`named link`*__][some-url]
+  - __*[`named link`][some-url]*__
+
 # Image
 
 ![named-image]
@@ -241,6 +282,13 @@ default      | align left      | centered           | align right
 - [ ] task
 
 
+## Line Breaks
+
+> Line 1
+> Line 2
+> Line 3
+
+
 # HTML
 
 <h2>HTML Tags</h2>
@@ -251,8 +299,14 @@ default      | align left      | centered           | align right
 
 ## Details/Summary
 
-<details>
-<summary>Click to Expand</summary>
+<details open><summary>Open by Default</summary>
+
+- [x] task
+- [ ] task
+
+</details>
+
+<details><summary>Click to Expand</summary>
 
 ```js
 var code = 'block'
@@ -261,6 +315,7 @@ var code = 'block'
 ### Inner Header
 
 [link](https://github.com/simov/markdown-viewer)
+
 </details>
 
 
@@ -291,11 +346,10 @@ var code = 'block'
 
 # Extras
 
-## Emoji
 
-- shortcode: :wave: :alien:
-- unicode: 👋 👽
-- ascii: :D :/
+## Syntax Highlighting
+
+- [Examples and Syntax](highlighting.md)
 
 
 ## MathJax
@@ -303,9 +357,16 @@ var code = 'block'
 - [Examples and Syntax](mathjax.md)
 
 
-## Syntax Highlighting
+## Mermaid
 
-- [Examples and Syntax](highlighting.md)
+- [Examples and Syntax](mermaid.md)
+
+
+## Emoji
+
+- shortcode: :wave: :alien:
+- unicode: 👋 👽
+- ascii: :D :/
 
 
 ## Frontmatter
@@ -396,3 +457,65 @@ case 3: a table at indentation level 1, after a a paragraph (at level 0) -- this
     |A|B|
     |---|---|
     |1|2|
+
+# Empty Table Cells
+
+|   | Test    |
+|---|---------|
+| 1 | Problem |
+
+| Column 1 | Column 2 | Column 3  |
+|----------|----------|-----------|
+| This     | Is       | Correct   |
+|          | Rendered | Incorrect |
+
+
+## h2 before
+
+# h1
+
+## escape <> for things like <script\>
+
+
+---
+
+
+https://github.com/simov/markdown-viewer/issues/124
+
+line 1 \*\*bold follwed by period\*\*.  
+line 2  
+line 3 \*\*bold\*\*  
+line 4  
+line 5 \*italic follwed by period\*.  
+line 6  
+line 7 \*italic\*  
+line 8  
+line 9 text followed by period.  
+line 10  
+line 11 text  
+line 12  
+
+---
+
+https://github.com/simov/markdown-viewer/issues/125
+
+* First support:
+```
+Bold
+Underline
+InvertColors
+ClearAttributes
+ResetAllAttributes
+
+Red
+IntenseRed
+OnRed
+OnIntenseRed
+```
+
+---
+
+https://github.com/simov/markdown-viewer/issues/127
+
+Markdown-Viewer是浏览器上最好的Markdown预览插件，能够对Md文件进行高度定制化的预
+览，支持众多选项设置，易于安装，免费开源。

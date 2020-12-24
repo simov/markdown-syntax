@@ -141,6 +141,12 @@ type Query {hero: Character}
 haskell :: Str -> String
 ```
 
+#### hcl
+
+```hcl
+variable "a" {} 
+```
+
 #### html
 
 ```html
@@ -162,7 +168,7 @@ let some = 'javascript';
 #### js
 
 ```js
-const some = 'js';
+const some = 'js'
 ```
 
 #### json
@@ -171,10 +177,10 @@ const some = 'js';
 {"some": "json"}
 ```
 
-#### jsonp
+#### jsx
 
-```jsonp
-function({"some": "jsonp"})
+```jsx
+const element = <h1>Hello, {name}</h1>
 ```
 
 #### latex
