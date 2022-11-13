@@ -95,7 +95,7 @@ var some = "dart";
 
 #### docker
 
-```docker
+```Dockerfile
 MAINTAINER docker
 ```
 

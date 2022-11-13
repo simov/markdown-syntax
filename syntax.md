@@ -50,7 +50,6 @@ ___
 
 _ _ _
 
-
 # List
 
 - ul
@@ -82,11 +81,19 @@ _ _ _
   1. ol
     1. ol
 
+-
 
 1. ol
+1. ol
+1. ol
+    1. ol
+    1. ol
     1. ol
         1. ol
+        1. ol
+        1. ol
 
+---
 
 # Text Formatting
 
@@ -101,7 +108,6 @@ _italic_
 `inline code`
 
 > blockquote
-
 
 ## Combinations
 
@@ -136,6 +142,7 @@ _**`something`**_
 
 > ***`blockquote`***
 
+---
 
 # Link
 
@@ -158,7 +165,6 @@ _**`something`**_
 <https://github.com/simov/markdown-viewer>
 
 https://github.com/simov/markdown-viewer
-
 
 ## Combinations
 
@@ -201,6 +207,8 @@ https://github.com/simov/markdown-viewer
   - [__*`named link`*__][some-url]
   - __*[`named link`][some-url]*__
 
+---
+
 # Image
 
 ![named-image]
@@ -225,6 +233,7 @@ https://github.com/simov/markdown-viewer
   [named-image]: http://i.imgur.com/rKYxW.jpg "Named Image"
   [some-url]: https://github.com/simov/markdown-viewer
 
+---
 
 # Code Block
 
@@ -238,9 +247,9 @@ fenced code block using backtick
 fenced code block using tilde
 ~~~
 
+---
 
 # GFM
-
 
 ## Table
 
@@ -250,6 +259,11 @@ default      | align left      | centered           | align right
 default left | align left left | something centered | something align right
 default      | align left      | centered           | align right
 
+| table        | col             | col                | col
+| -            | :-              | :-:                | -:
+| default      | align left      | centered           | align right
+| default left | align left left | something centered | something align right
+| default      | align left      | centered           | align right
 
 ## Strikethrough
 
@@ -275,12 +289,10 @@ default      | align left      | centered           | align right
 
 > ~~**_`something`_**~~
 
-
 ## Task List
 
 - [x] task
 - [ ] task
-
 
 ## Line Breaks
 
@@ -288,14 +300,30 @@ default      | align left      | centered           | align right
 > Line 2
 > Line 3
 
+## Footnotes
+
+Something something[^named]
+
+And something else[^1], and a link[^2]
+
+
+[^1]: This reference footnote contains a paragraph...
+
+    * ...and a list
+
+[^2]: https://github.com/simov/markdown-viewer
+[^named]: https://github.com/simov/markdown-viewer
+
+---
 
 # HTML
+
+## CSS Style
 
 <h2>HTML Tags</h2>
 <div style="text-decoration: underline;">
   <p><strong>bold</strong> and underline</p>
 </div>
-
 
 ## Details/Summary
 
@@ -318,7 +346,6 @@ var code = 'block'
 
 </details>
 
-
 ## Definition List
 
 <dl>
@@ -332,35 +359,30 @@ var code = 'block'
   <dd>Green</dd>
 </dl>
 
-
 ## KBD
 
 <kbd>the kbd tag</kbd>
-
 
 ## Supscript/subscript
 
 - 19<sup>th</sup>
 - H<sub>2</sub>O
 
+---
 
 # Extras
 
-
 ## Syntax Highlighting
 
-- [Examples and Syntax](highlighting.md)
-
+- [Examples and Syntax](prism.md)
 
 ## MathJax
 
 - [Examples and Syntax](mathjax.md)
 
-
 ## Mermaid
 
 - [Examples and Syntax](mermaid.md)
-
 
 ## Emoji
 
@@ -368,21 +390,9 @@ var code = 'block'
 - unicode: 👋 👽
 - ascii: :D :/
 
+---
 
-## Frontmatter
-
-- [yaml](frontmatter/yaml.md)
-- [toml](frontmatter/toml.md)
-
-
-## Character Encoding
-
-- [Big5](encoding/big5.md)
-- [UTF-8](encoding/utf-8.md)
-- [Windows-1251](encoding/windows-1251.md)
-
-
-## Escapes
+# Escapes
 
 <em\>HTML tags</em\>
 
@@ -396,31 +406,11 @@ fenced code block
 ```
 ````
 
-## Mention
-
-@simov
-
-
-## Footnotes
-
-
-Something something[^named]
-
-And something else[^1], and a link[^2]
-
-
-[^1]: This reference footnote contains a paragraph...
-
-    * ...and a list
-
-[^2]: https://github.com/simov/markdown-viewer
-[^named]: https://github.com/simov/markdown-viewer
-
-
 ---
 
-
 # Quirks
+
+## Code block inside list
 
 1. item 1
 
@@ -432,33 +422,33 @@ code block
 
 3. item 3
 
-# Nested tables in lists
+## Tables inside nested lists
 
 case 0: a table at indentation level 0, after a paragraph (at level 0) -- this should render the table not-indented
 
 |A|B|
-|---|---|
+|-|-|
 |1|2|
 
 * case 1: a table at indentation level 1, after a list item at level 1 -- this should render the table indented once
 
     |A|B|
-    |---|---|
+    |-|-|
     |1|2|
 
     * case 2: a table at indentation level 2, after a list item at level 2 -- this should render the table indented twice
 
         |A|B|
-        |---|---|
+        |-|-|
         |1|2|
 
 case 3: a table at indentation level 1, after a a paragraph (at level 0) -- this should render the raw text into a code block
 
     |A|B|
-    |---|---|
+    |-|-|
     |1|2|
 
-# Empty Table Cells
+## Empty table cells
 
 |   | Test    |
 |---|---------|
@@ -474,11 +464,7 @@ case 3: a table at indentation level 1, after a a paragraph (at level 0) -- this
 
 # h1
 
-## escape <> for things like <script\>
-
-
----
-
+## Problem with spaces as new-line after bold/italics followed by a period
 
 https://github.com/simov/markdown-viewer/issues/124
 
@@ -495,7 +481,7 @@ line 10
 line 11 text  
 line 12  
 
----
+## Blank line in code block breaks rendering
 
 https://github.com/simov/markdown-viewer/issues/125
 
@@ -513,7 +499,7 @@ OnRed
 OnIntenseRed
 ```
 
----
+## line breaks in CJK
 
 https://github.com/simov/markdown-viewer/issues/127
 

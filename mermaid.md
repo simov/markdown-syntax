@@ -56,7 +56,20 @@ stateDiagram-v2
   Moving --> Still
   Moving --> Crash
   Crash --> [*]
-  _
+```
+
+# ER Diagram
+
+```mermaid
+erDiagram
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+  CUSTOMER ||--o{ ORDER : places
+  CUSTOMER ||--o{ INVOICE : "liable for"
+  DELIVERY-ADDRESS ||--o{ ORDER : receives
+  INVOICE ||--|{ ORDER : covers
+  ORDER ||--|{ ORDER-ITEM : includes
+  PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+  PRODUCT ||--o{ ORDER-ITEM : "ordered in"
 ```
 
 # Gantt Chart
@@ -73,6 +86,36 @@ gantt
   another task      : 24d
 ```
 
+# User Journey
+
+```mmd
+journey
+  title My working day
+  section Go to work
+    Make tea: 5: Me
+    Go upstairs: 3: Me
+    Do work: 1: Me, Cat
+  section Go home
+    Go downstairs: 5: Me
+    Sit down: 3: Me
+```
+
+# Git
+
+```mmd
+gitGraph
+  commit
+  commit
+  branch develop
+  checkout develop
+  commit
+  commit
+  checkout main
+  merge develop
+  commit
+  commit
+```
+
 # Pie Chart
 
 ```mmd
@@ -80,20 +123,6 @@ pie title Pets adopted by volunteers
   "Dogs" : 386
   "Cats" : 85
   "Rats" : 15       
-```
-
-# ER Diagram
-
-```mermaid
-erDiagram
-  CUSTOMER }|..|{ DELIVERY-ADDRESS : has
-  CUSTOMER ||--o{ ORDER : places
-  CUSTOMER ||--o{ INVOICE : "liable for"
-  DELIVERY-ADDRESS ||--o{ ORDER : receives
-  INVOICE ||--|{ ORDER : covers
-  ORDER ||--|{ ORDER-ITEM : includes
-  PRODUCT-CATEGORY ||--|{ PRODUCT : contains
-  PRODUCT ||--o{ ORDER-ITEM : "ordered in"        
 ```
 
 [![](http://i.imgur.com/rKYxW.jpg)](https://github.com/simov/markdown-viewer)

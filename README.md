@@ -1,15 +1,14 @@
 
 # markdown-syntax
 
-> Markdown syntax examples for [Markdown Viewer](https://github.com/simov/markdown-viewer)
+> _Markdown syntax examples for [Markdown Viewer](https://github.com/simov/markdown-viewer)_
 
-- [syntax](syntax.md)
-- [highlighting](highlighting.md)
-- [mathjax](mathjax.md)
-- encoding
-  - [big5](encoding/big5.md)
-  - [utf-8](encoding/utf-8.md)
-  - [windows-1251](encoding/windows-1251.md)
-- frontmatter
-  - [toml](frontmatter/toml.md)
-  - [yaml](frontmatter/yaml.md)
+- **[elements](elements.md)** - quick overview of the Markdown syntax and all features available in Markdown Viewer
+
+- **[syntax](syntax.md)** - extensive list of Markdown syntax examples with different combinations and edge cases
+
+- **[prism](prism.md)** - syntax highlighting examples, for the full list of currently supported languages take a look at this [file](https://github.com/simov/markdown-viewer/blob/main/build/prism/prism.json)
+
+- **[mermaid](mermaid.md)** - different types of Mermaid diagrams
+
+- **[mathjax](mathjax.md)** - MathJax examples and support documentation
