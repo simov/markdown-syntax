@@ -158,6 +158,12 @@ And something else[^1], and a link[^2]
 [^2]: https://github.com/simov/markdown-viewer
 [^named]: https://github.com/simov/markdown-viewer
 
+## Line Breaks
+
+> Line 1
+> Line 2
+> Line 3
+
 ---
 
 # HTML
