@@ -78,7 +78,7 @@ x_i = x_\gamma
 
 `$x_i = x_\gamma$` $x_i = x_\gamma$
 
-## `$` multiline `$` Not Supported!
+## `$` multiline `$`
 
 ```
 $
