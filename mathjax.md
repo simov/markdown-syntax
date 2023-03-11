@@ -3,17 +3,17 @@
 
 ## Delimiters
 
-Delimiter                         | Delimiters  | Example                     | Result                    | Support
-:---                              | :---:       | :---                        | :---:                     | :---:
-No delimiters                     | `str`       | `\sqrt{3x-1}+(1+x)^2`       | \sqrt{3x-1}+(1+x)^2       | no
-Bracket without backslash         | `[str]`     | `[\sqrt{3x-1}+(1+x)^2]`     | [\sqrt{3x-1}+(1+x)^2]     | no
-Single backslash with bracket     | `\[str\]`   | `\[\sqrt{3x-1}+(1+x)^2\]`   | \[\sqrt{3x-1}+(1+x)^2\]   | **yes**
-Double backslash with bracket     | `\\[str\\]` | `\\[\sqrt{3x-1}+(1+x)^2\\]` | \\[\sqrt{3x-1}+(1+x)^2\\] | no
-Parentheses without backslash     | `(str)`     | `(\sqrt{3x-1}+(1+x)^2)`     | (\sqrt{3x-1}+(1+x)^2)     | no
-Single backslash with parentheses | `\(str\)`   | `\(\sqrt{3x-1}+(1+x)^2\)`   | \(\sqrt{3x-1}+(1+x)^2\)   | **yes**
-Double backslash with parentheses | `\\(str\\)` | `\\(\sqrt{3x-1}+(1+x)^2\\)` | \\(\sqrt{3x-1}+(1+x)^2\\) | no
-Single dollar sign                | `$str$`     | `$\sqrt{3x-1}+(1+x)^2$`     | $\sqrt{3x-1}+(1+x)^2$     | **yes**
-Double dollar sign                | `$$str$$`   | `$$\sqrt{3x-1}+(1+x)^2$$`   | $$\sqrt{3x-1}+(1+x)^2$$   | **yes**
+| Delimiter                         | Delimiters  | Example                     | Result                    | Support
+| :---                              | :---:       | :---                        | :---:                     | :---:
+| No delimiters                     | `str`       | `\sqrt{3x-1}+(1+x)^2`       | \sqrt{3x-1}+(1+x)^2       | no
+| Bracket without backslash         | `[str]`     | `[\sqrt{3x-1}+(1+x)^2]`     | [\sqrt{3x-1}+(1+x)^2]     | no
+| Single backslash with bracket     | `\[str\]`   | `\[\sqrt{3x-1}+(1+x)^2\]`   | \[\sqrt{3x-1}+(1+x)^2\]   | **yes**
+| Double backslash with bracket     | `\\[str\\]` | `\\[\sqrt{3x-1}+(1+x)^2\\]` | \\[\sqrt{3x-1}+(1+x)^2\\] | no
+| Parentheses without backslash     | `(str)`     | `(\sqrt{3x-1}+(1+x)^2)`     | (\sqrt{3x-1}+(1+x)^2)     | no
+| Single backslash with parentheses | `\(str\)`   | `\(\sqrt{3x-1}+(1+x)^2\)`   | \(\sqrt{3x-1}+(1+x)^2\)   | **yes**
+| Double backslash with parentheses | `\\(str\\)` | `\\(\sqrt{3x-1}+(1+x)^2\\)` | \\(\sqrt{3x-1}+(1+x)^2\\) | no
+| Single dollar sign                | `$str$`     | `$\sqrt{3x-1}+(1+x)^2$`     | $\sqrt{3x-1}+(1+x)^2$     | **yes**
+| Double dollar sign                | `$$str$$`   | `$$\sqrt{3x-1}+(1+x)^2$$`   | $$\sqrt{3x-1}+(1+x)^2$$   | **yes**
 
 ## Empty
 
@@ -128,9 +128,11 @@ x_i = x_\gamma
 
 ### Dollar Sign
 
-`\$6.20 and \$0.5` \$6.20 and \$0.5
+- `\$6.20` and `\$0.5` - \$6.20 and \$0.5
 
-`$4.40` $4.40
+- `$4.40` - $4.40
+
+- `\\$1 \\$2` - \\$1 \\$2
 
 ---
 
@@ -200,6 +202,17 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   \nabla \cdot \vec{\mathbf{B}} & = 0
 \end{align}
 
+## Stochastic Simulation
+
+Input: $\mathbf{X}_i = (X_{1i}, \ldots, X_{ki})$
+
+Output: $\mathbf{Y}_i = h(\mathbf{X}_i)$
+
+Analysis:
+
+$$Pr(h(\mathbf{X}) \le b) \approx \frac{1}{N} \sum_{i=1}^N I(h(\mathbf{X}_i) \le b)$$
+$$E(h(\mathbf{X})) \approx \frac{1}{N} \sum_{i=1}^N h(\mathbf{X}_i)$$
+
 ## In-line Mathematics
 
 Finally, while display equations look good for a page of samples, the
@@ -235,3 +248,153 @@ For Neural Networks, it is:
 $$
 J(\Theta) = - \frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K \left[y^{(i)}_k \log ((h_\Theta (x^{(i)}))_k) + (1 - y^{(i)}_k)\log (1 - (h_\Theta(x^{(i)}))_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{p=1}^{s_l} \sum_{n=1}^{s_{l+1}} ( \Theta_{n,p}^{(l)})^2
 $$
+
+Commutative diagrams using `\array` or `\newcommand`:
+
+$$
+\newcommand{\ra}[1]{\!\!\!\!\!\!\!\!\!\!\!\!\xrightarrow{\quad#1\quad}\!\!\!\!\!\!\!\!}
+\newcommand{\da}[1]{\left\downarrow{\scriptstyle#1}\vphantom{\displaystyle\int_0^1}\right.}
+%
+\begin{array}{llllllllllll} 0 & \ra{f_1} & A & \ra{f_2} & B & \ra{f_3} & C & \ra{f_4} & D & \ra{f_5} & 0 \\
+\da{g_1} & & \da{g_2} & & \da{g_3} & & \da{g_4} & & \da{g_5} & & \da{g_6} \\
+0 & \ra{h_1} & 0 & \ra{h_2} & E & \ra{h_3} & F & \ra{h_4} & 0 & \ra{h_5} & 0 \\
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccccc}
+0 & \xrightarrow{i} & A & \xrightarrow{f} & B & \xrightarrow{q} & C & \xrightarrow{d} & 0 \\
+\downarrow & \searrow & \downarrow & \nearrow & \downarrow & \searrow & \downarrow & \nearrow & \downarrow \\
+0 & \xrightarrow{j} & D & \xrightarrow{g} & E & \xrightarrow{r} & F & \xrightarrow{e} & 0
+\end{array}
+$$
+
+---
+
+# Formatting
+
+- $\textbf{bold}$
+
+- $\textit{italic}$
+
+- $\mathtt{Typewriter}$
+
+- $\mathscr{script}$
+
+- $\mathcal{CALLIGRAPHIC}$
+
+- $\mathfrak{Fraktur}$
+
+---
+
+# TeX/LaTeX Extensions
+
+- $\mathtip{math}{tip}$
+
+- $\toggle{math1}{math2}\endtoggle$
+
+- $\circeq \lesseqqgtr$
+
+- $
+\bbox[red]{x+y}
+\bbox[2pt]{x+1}
+\bbox[red,2pt]{x+1}
+\bbox[5px, border: 2px solid red]{x+1}
+$
+
+- $\boldsymbol{A}$
+
+- $\bra{1}$
+
+- $$
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{Hyp$^{1}$}
+\UnaryInfC{$P$}
+\AXC{$P\to Q$}
+\RL{$\to_E$}
+\BIC{$Q^2$}
+\AXC{$Q\to R$}
+\RL{$\to_E$}
+\BIC{$R$}
+\AXC{$Q$}
+\RL{Rit$^2$}
+\UIC{$Q$}
+\RL{$\wedge_I$}
+\BIC{$Q\wedge R$}
+\RL{$\to_I$$^1$}
+\UIC{$P\to Q\wedge R$}
+\end{prooftree}
+$$
+
+- $\cancel{math}$
+
+- $
+\require{centernot}
+\begin{array}{c}
+  A \not\longrightarrow B\\
+  A \centernot\longrightarrow B
+\end{array}
+$
+
+- $\color{red}{x} \color{black}+ \color{blue}{y}$
+
+- $
+\require{colortbl}
+\begin{array}{|l|c|}
+  \rowcolor[gray]{.5}\columncolor{red} one & two\\
+  \rowcolor{lightblue} three & four\\\hline
+  five & six \\
+  \rowcolor{magenta}seven & \cellcolor{green}eight
+\end{array}
+$
+
+- $
+\require{empheq}
+\empheqbiglbrack
+$
+
+- $
+\enclose{circle}[mathcolor="red"]{x}
+\enclose{circle}[mathcolor="red"]{\color{black}{x}}
+\enclose{circle,box}{x}
+\enclose{circle}{\enclose{box}{x}}
+$
+
+- $
+\require{gensymb}
+\celsius
+\degree
+\micro
+\ohm
+\perthousand
+$
+
+- $
+\ce{C6H5-CHO}
+\ce{$A$ ->[\ce{+H2O}] $B$}
+\ce{SO4^2- + Ba^2+ -> BaSO4 v}
+$
+
+- $
+\require{physics}
+\ket{\psi}=\frac{1}{\sqrt{2}}(\ket{00}+\ket{11})
+$
+
+- $
+\unicode{65}                        % the character 'A'
+\unicode{x41}                       % the character 'A'
+\unicode[.55,0.05]{x22D6}           % less-than with dot, with height .55em and depth 0.05em
+\unicode[.55,0.05][Geramond]{x22D6} % same taken from Geramond font
+\unicode[Garamond]{x22D6}           % same, but with default height, depth of .8em,.2em
+$
+
+- $
+\require{upgreek}
+\upalpha
+\upbeta
+\upchi
+\updelta
+$
+
+- $\verb|\sqrt{x}|$

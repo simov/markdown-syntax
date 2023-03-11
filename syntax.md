@@ -35,6 +35,11 @@ h2
 
 # a/b c-d
 
+# toc - [link](https://github.com/simov/markdown-viewer) hey [link](https://github.com/simov/markdown-viewer) a
+
+# toc - header :alien: emoji
+
+# toc - header `code` _italic_ **bold**
 
 # Horizontal Line
 
@@ -344,6 +349,8 @@ var code = 'block'
 
 [link](https://github.com/simov/markdown-viewer)
 
+:alien:
+
 </details>
 
 ## Definition List
@@ -368,6 +375,43 @@ var code = 'block'
 - 19<sup>th</sup>
 - H<sub>2</sub>O
 
+## MathML
+
+<p>
+When
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>a</mi><mo>&#x2260;</mo><mn>0</mn>
+</math>,
+there are two solutions to
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
+  <mo>+</mo> <mi>b</mi><mi>x</mi>
+  <mo>+</mo> <mi>c</mi> <mo>=</mo> <mn>0</mn>
+</math>
+and they are
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi> <mo>=</mo>
+  <mrow>
+    <mfrac>
+      <mrow>
+        <mo>&#x2212;</mo>
+        <mi>b</mi>
+        <mo>&#x00B1;</mo>
+        <msqrt>
+          <msup><mi>b</mi><mn>2</mn></msup>
+          <mo>&#x2212;</mo>
+          <mn>4</mn><mi>a</mi><mi>c</mi>
+        </msqrt>
+      </mrow>
+      <mrow>
+        <mn>2</mn><mi>a</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+  <mtext>.</mtext>
+</math>
+</p>
+
 ---
 
 # Extras
@@ -375,6 +419,26 @@ var code = 'block'
 ## Syntax Highlighting
 
 - [Examples and Syntax](prism.md)
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax Highlighting inside HTML table</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre class="language-js"><code class="language-js">var hello = 'hi'</code></pre>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>amazing</td>
+    </tr>
+  </tfoot>
+</table>
 
 ## MathJax
 
@@ -384,11 +448,49 @@ var code = 'block'
 
 - [Examples and Syntax](mermaid.md)
 
+<table>
+  <thead>
+    <tr>
+      <th>Diagram inside HTML table</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre><code class="mermaid">
+          sequenceDiagram
+            Alice->>+John: Hello John, how are you?
+            Alice->>+John: John, can you hear me?
+            John-->>-Alice: Hi Alice, I can hear you!
+            John-->>-Alice: I feel great!
+        </code></pre>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>amazing</td>
+    </tr>
+  </tfoot>
+</table>
+
 ## Emoji
 
 - shortcode: :wave: :alien:
 - unicode: 👋 👽
 - ascii: :D :/
+
+```
+:wave:
+```
+```
+something :wave:
+```
+- < :wave:
+- &lt; :wave:
+- `:wave:`
+- `something :wave:`
+- [link](https://something/:wave:/a)
 
 ---
 

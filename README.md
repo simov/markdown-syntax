@@ -7,8 +7,10 @@
 
 - **[syntax](syntax.md)** - extensive list of Markdown syntax examples with different combinations and edge cases
 
-- **[prism](prism.md)** - syntax highlighting examples, for the full list of currently supported languages take a look at this [file](https://github.com/simov/markdown-viewer/blob/main/build/prism/prism.json)
+- **[prism](prism.md)** - syntax highlighting examples, for the full list of the supported languages look [here](https://prismjs.com/#supported-languages)
 
 - **[mermaid](mermaid.md)** - different types of Mermaid diagrams
 
 - **[mathjax](mathjax.md)** - MathJax examples and support documentation
+
+- frontmatter - [yaml](frontmatter/yaml.md), [toml](frontmatter/toml.md)

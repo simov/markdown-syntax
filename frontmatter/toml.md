@@ -1,19 +1,19 @@
 +++
-title = Headline level one
+title = TOML Page Title
+description = TOML Front Matter Example
 tags = [ "tag1", "tag2", "tag3" ]
-description = something
 +++
 
 # TOML
 
-This page contains TOML front matter:
+This page contains [TOML](https://toml.io) front matter:
 
-```
+```toml
 +++
-title = Headline level one
+title = TOML Page Title
+description = TOML Front Matter Example
 tags = [ "tag1", "tag2", "tag3" ]
-description = something
 +++
 ```
 
-It should be ignored if you are using the `Remark` compiler.
+The frontmatter block will be stripped and the `title` variable will be used to set the page title.

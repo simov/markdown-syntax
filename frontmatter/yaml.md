@@ -1,21 +1,19 @@
 ---
-title: Headline level one
+title: YAML Page Title
+description: YAML Front Matter Example
 tags: [ "tag1", "tag2", "tag3" ]
-description:
-unicode: —
 ---
 
 # YAML
 
-This page contains [YAML](http://yaml.org) front matter:
+This page contains [YAML](https://yaml.org) front matter:
 
 ```yaml
 ---
-title: Headline level one
+title: YAML Page Title
+description: YAML Front Matter Example
 tags: [ "tag1", "tag2", "tag3" ]
-description:
-unicode: —
 ---
 ```
 
-It should be ignored if you are using the `Remark` compiler.
+The frontmatter block will be stripped and the `title` variable will be used to set the page title.

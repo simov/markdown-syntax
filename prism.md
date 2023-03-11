@@ -1,6 +1,8 @@
 
 # Syntax Highlighting
 
+> Full list of supported languages and their corresponding [aliases](https://prismjs.com/#supported-languages) to use.
+
 #### actionscript
 
 ```actionscript
