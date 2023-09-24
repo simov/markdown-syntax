@@ -159,6 +159,25 @@ mindmap
       Mermaid
 ```
 
+# Quadrant Chart
+
+```mermaid
+quadrantChart
+  title Reach and engagement of campaigns
+  x-axis Low Reach --> High Reach
+  y-axis Low Engagement --> High Engagement
+  quadrant-1 We should expand
+  quadrant-2 Need to promote
+  quadrant-3 Re-evaluate
+  quadrant-4 May be improved
+  Campaign A: [0.3, 0.6]
+  Campaign B: [0.45, 0.23]
+  Campaign C: [0.57, 0.69]
+  Campaign D: [0.78, 0.34]
+  Campaign E: [0.40, 0.34]
+  Campaign F: [0.35, 0.78]
+```
+
 # C4 Diagram
 
 ```mermaid
@@ -268,6 +287,17 @@ test_req4 - derives -> test_req5
 test_req5 - refines -> test_req6
 test_entity3 - verifies -> test_req5
 test_req <- copies - test_entity2
+```
+
+# Sankey Diagram
+
+```mermaid
+sankey-beta
+  Revenue,Expenses,10
+  Revenue,Profit,10
+  Expenses,Manufacturing,5
+  Expenses,Tax,3
+  Expenses,Research,2
 ```
 
 [![](http://i.imgur.com/rKYxW.jpg)](https://github.com/simov/markdown-viewer)

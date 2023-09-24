@@ -1,4 +1,6 @@
 
+# Headers `h1`/`h2`/`h3`/`h4`/`h5`/`h6`
+
 # h1
 
 ## h2
@@ -13,7 +15,72 @@
 
 ---
 
-# List
+# Text `i`/`b`/`code`/`s`/`mark`/`ins`/`sup`/`sub`/`abbr`/`kbd`
+
+| Element | MD | Output | HTML | Output
+| :- | :- | :- | :- | :-
+| [italic] | `*italic*` | *italic* | `<i>` | <i>italic</i>
+| [bold] | `**bold**` | **bold** | `<b>` | <b>bold</b>
+| [code] | `` `code` `` | `code` | `<code>` | <code>code</code>
+| [strikethrough] | `~~strikethrough~~` | ~~strikethrough~~ | `<s>` | <s>strikethrough</s>
+| [mark] | `==mark==` | ==mark== | `<mark>` | <mark>mark</mark>
+| [ins] | `++ins++` | ++ins++ | `<ins>` | <ins>ins</ins>
+| [sup] | `^sup^` | a^sup^ | `<sup>` | a<sup>sup</sup>
+| [sub] | `~sub~` | a~sub~ | `<sub>` | a<sub>sub</sub>
+| [abbr] | `*[word]: Text` | word | `<abbr>` | <abbr title="Abbreviation">abbr</abbr>
+| [kbd] |  |  | `<kbd>` | <kbd>kbd</kbd>
+
+[italic]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i "The Idiomatic Text element"
+[bold]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b "The Bring Attention To element"
+[code]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code "The Inline Code element"
+[strikethrough]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s "The Strikethrough element"
+[mark]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark "The Mark Text element"
+[ins]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins "The Inserted Text element"
+[sup]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup "The Superscript element"
+[sub]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub "The Subscript element"
+[abbr]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr "The Abbreviation element"
+[kbd]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd "The Keyboard Input element"
+
+*[word]: Text
+
+# Line Breaks `br`
+
+> Line 1
+> Line 2
+> Line 3
+
+> CJK:
+> あおえ
+> うい
+
+# Typography
+
+- ellipsis ...
+- single 'quotes'
+- double "quotes"
+- dash --
+- symbols (c) (C) (r) (R) (tm) (TM) +-
+
+# Blockquote `blockquote`
+
+> paragraph
+>
+> paragraph
+
+> nested
+>> block
+> > > quotes
+
+# Link `a`
+
+- github.com • https://github.com • <https://github.com>
+- someone@email.com • <someone@email.com>
+- [inline](https://github.com/simov/markdown-viewer "Markdown Viewer")
+- [referenced] • [referenced][referenced]
+
+[referenced]: https://github.com/simov/markdown-viewer "Markdown Viewer"
+
+# List `ul`/`ol`/`li`
 
 - ul
   - ul
@@ -23,128 +90,35 @@
 2. ol
 3. ol
 
-# Text Formatting
+# Table `table`/`thead`/`th`/`tbody`/`tr`/`td`
 
-regular
+| default      | left            | centered           | right
+| ---          | :---            | :---:              | ---:
+| default      | align left      | centered           | align right
+| default left | align left left | centered centered  | align right right
+| default      | align left      | centered           | align right
 
-**bold**
+# Definition List `dl`/`dt`/`dd`
 
-*italic*
+Type
+: Extension
 
-`inline code`
+Name
+: Markdown Viewer
 
-> blockquote
+<dl>
+  <dt>Type</dt>
+  <dd>Extension</dd>
+  <dt>Name</dt>
+  <dd>Markdown Viewer</dd>
+</dl>
 
-# Blockquotes
-
-> regular
-
-> _italic_
-
-> **bold**
-
-> `code`
-
-> **`code bold`**
-
-> ***`code bold italic`***
-
-> nested
->> block
-> > > quotes
-
-# Link
-
-- https://github.com
-- [regular][url]
-- [*italic*][url]
-- [**bold**][url]
-- [***bold italic***][url]
-- [`regular`][url]
-- *[`italic`][url]*
-- **[`bold`][url]**
-- ***[`bold italic`][url]***
-
-  [url]: https://github.com/simov/markdown-viewer
-
-# Inline Code
-
-- `regular`
-
-- *`italic`*
-
-- **`bold`**
-
-- **_`bold italic`_**
-
-# Code Block
-
-```
-fenced code block using backticks
-```
-
-```js
-var prism = 'syntax highlighting'
-```
-
-```mermaid
-sequenceDiagram
-  Alice->>+John: Hello John, how are you?
-  Alice->>+John: John, can you hear me?
-  John-->>-Alice: Hi Alice, I can hear you!
-  John-->>-Alice: I feel great!
-```
-
-# Image
-
-![](http://i.imgur.com/rKYxW.jpg "Inline Alt Text")
-
-# Emoji
-
-:smile:
-
-# MathJax
-
-$$
-J(\theta) = - \frac{1}{m} \sum_{i=1}^m [ y^{(i)}\ \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\ \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2
-$$
-
----
-
-# GFM
-
-## Table
-
-table        | col             | col                | col
----          | :---            | :---:              | ---:
-default      | align left      | centered           | align right
-default left | align left left | centered centered  | align right right
-default      | align left      | centered           | align right
-
-## Strikethrough
-
-~~regular~~
-
-~~_italic_~~
-
-~~**bold**~~
-
-~~**_bold italic_**~~
-
-~~`regular`~~
-
-~~_`italic`_~~
-
-~~***`bold italic`***~~
-
-> ~~**_`code bold italic`_**~~
-
-## Task List
+# Task List
 
 - [x] task
 - [ ] task
 
-## Footnotes
+# Footnotes
 
 Something something[^named]
 
@@ -158,68 +132,43 @@ And something else[^1], and a link[^2]
 [^2]: https://github.com/simov/markdown-viewer
 [^named]: https://github.com/simov/markdown-viewer
 
-## Line Breaks
+# Image `img`
 
-> Line 1
-> Line 2
-> Line 3
+![cat tied](https://i.imgur.com/YQnCDSk.png "Hey")
 
----
+[![cat walk](https://i.imgur.com/pVtY8DC.png "Click Me")](https://github.com/simov/markdown-viewer)
 
-# HTML
+# Code Block `pre`
 
-## CSS - inline styles
-
-<p style="text-decoration: underline;">Underline css style</p>
-
-## `abbr` - abbreviation
-
-An abbreviation of the word attribute is <abbr title="foobar">attr</abbr>.
-
-## `details`, `summary` - details disclosure, details summary
-
-<details open><summary>Open by Default</summary>
-
-- [x] task
-- [ ] task
-
-</details>
-
-<details><summary>Click to Expand</summary>
-
-```js
-var code = 'block'
+```
+fenced code block using backticks
 ```
 
-### Inner Header
+```js
+var foo = 'syntax highlighting using Prism.js'
+```
 
-[link](https://github.com/simov/markdown-viewer)
+```mermaid
+%% Diagrams using Mermaid.js %%
 
-</details>
+sequenceDiagram
+  Alice->>+John: Hello John, how are you?
+  Alice->>+John: John, can you hear me?
+  John-->>-Alice: Hi Alice, I can hear you!
+  John-->>-Alice: I feel great!
+```
 
-## `dl`, `dt`, `dd` - definition list
+# Emoji
 
-<dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
-  <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
-</dl>
+:smile:
 
-## `kbd` - keyboard input
+# MathJax
 
-<kbd>the kbd tag</kbd>
+$$
+J(\theta) = - \frac{1}{m} \sum_{i=1}^m [ y^{(i)}\ \log (h_\theta (x^{(i)})) + (1 - y^{(i)})\ \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2
+$$
 
-## `sub`, `sup` - subscript, superscript
-
-- H<sub>2</sub>O
-- 19<sup>th</sup>
-
-## `math` MathML
+# MathML `math`
 
 <p>
 When
@@ -256,9 +205,82 @@ and they are
 </math>
 </p>
 
+# Details `details`/`summary`
+
+<details open><summary>Open by Default</summary>
+
+- [x] task
+- [ ] task
+
+</details>
+
+<details><summary>Click to Expand</summary>
+
+```js
+var code = 'block'
+```
+
+### Inner Header
+
+[link](https://github.com/simov/markdown-viewer)
+
+</details>
+
+# Custom Attributes
+
+#### Check out this header id {#foo}
+
 ---
 
-## Example Text
+# Styles
+
+## CSS
+
+<p style="text-decoration: underline;">Underline</p>
+
+## Link
+
+- [regular][url]
+- [*italic*][url]
+- [**bold**][url] • [***bold italic***][url]
+- [`code`][url] • *[`code italic`][url]* • **[`code bold`][url]** • ***[`code bold italic`][url]***
+
+  [url]: https://github.com/simov/markdown-viewer
+
+## Inline Code
+
+- `regular`
+
+- *`italic`*
+
+- **`bold`** • ***`bold italic`***
+
+## Blockquotes
+
+> regular
+
+> _italic_
+
+> **bold**
+
+> `code`
+
+> **`code bold`**
+
+> ***`code bold italic`***
+
+## Strikethrough
+
+- ~~regular~~
+- ~~_italic_~~
+- ~~**bold**~~ • ~~***bold italic***~~
+- ~~`code`~~ • ~~_`code italic`_~~ • ~~***`code bold italic`***~~
+
+> ~~***`code bold italic`***~~
+
+---
+
+# Example Text
 
 Nullam quis risus eget [urna mollis ornare]() vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur `ridiculus` mus. Nullam id dolor id nibh ~~ultricies vehicula~~.
 
