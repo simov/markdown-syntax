@@ -496,6 +496,15 @@ something :wave:
 - `:wave:`
 - `something :wave:`
 - [link](https://something/:wave:/a)
+- emoji shortnames like `:smile:` will be converted to :smile: using EmojiOne images
+
+```
+:smile:
+```
+
+```js
+console.log(':smile:')
+```
 
 ---
 

@@ -300,4 +300,38 @@ sankey-beta
   Expenses,Research,2
 ```
 
+# XY Chart
+
+```mermaid
+xychart-beta
+  title "Sales Revenue"
+  x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+  y-axis "Revenue (in $)" 4000 --> 11000
+  bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+  line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
+
+# Block Chart
+
+```mermaid
+block-beta
+  columns 3
+  doc>"Document"]:3
+  space down1<[" "]>(down) space
+
+  block:e:3
+    l["left"]
+    m("A wide one in the middle")
+    r["right"]
+  end
+    space down2<[" "]>(down) space
+    db[("DB")]:3
+    space:3
+    D space C
+    db --> D
+    C --> db
+    D --> C
+    style m fill:#d6d,stroke:#333,stroke-width:4px
+```
+
 [![](http://i.imgur.com/rKYxW.jpg)](https://github.com/simov/markdown-viewer)
